@@ -6,32 +6,30 @@
     <meta name="description" content="Van der Meer Dienstengroep B.V. - Toonaangevend aannemersbedrijf in Amsterdam en omstreken.">
     <title>Van der Meer Dienstengroep | Aannemersbedrijf & Restauratie</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Fuentes Ultra-Premium: Inter para lectura, Playfair Display voor titels -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- CABECERA DE ALTA GAMA (3 BLOQUES SIMÉTRICOS) -->
     <header class="header">
         <div class="logo">
             VAN DER MEER <span class="gold-text">DIENSTENGROEP</span>
         </div>
         <nav class="center-nav">
-            <a href="index.html#over-ons">Over Ons</a>
-            <a href="index.html#diensten">Specialisaties</a>
-            <a href="aanvullende-diensten.html">Extra Expertise</a>
+            <a href="#over-ons">Over Ons</a>
+            <a href="#diensten">Specialisaties</a>
+            <a href="aanvullende-diensten.html">Aanvullende Diensten</a>
             <a href="werkwijze.html">Werkwijze</a>
         </nav>
         <div class="header-cta">
-            <a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a>
+            <a href="#contact" class="btn-primary">Offerte Aanvragen</a>
         </div>
     </header>
 
-    <!-- HERO SECTION CINEMÁTICO -->
-    <section class="hero" style="background-image: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.95) 100%), url('img/Pand-restauratie-1.jpeg');">
+    <!-- HERO CORREGIDO: background-size: contain para que la foto se vea COMPLETA sin zoom -->
+    <section class="hero" style="background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.9) 100%), url('img/Herstel-Monument-Adelaar-1.jpeg') no-repeat center center; background-size: contain; background-color: #030303;">
         <div class="hero-content animate-up">
             <div class="badge">VCA Gecertificeerd Vakmanschap</div>
             <h1>Meesters in <br><span class="gold-text">Restauratie & Bouwkunde</span></h1>
-            <p>Al meer dan 25 jaar de stille kracht achter de meest prestigieuze renovaties en complexe bouwprojecten. Van robuuste staalconstructies tot verfijnde restauraties door de hand van de meester.</p>
+            <p>Al meer dan 25 jaar de stille kracht achter de meest prestigieuze renovaties en complexe bouwprojecten.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary pulse-effect">Vrijblijvende Offerte</a>
                 <a href="#diensten" class="btn-secondary">Ontdek ons vakmanschap</a>
@@ -39,13 +37,12 @@
         </div>
     </section>
 
-    <!-- OVER ONS (Diseño Editorial) -->
     <section id="over-ons" class="about-container">
         <div class="about-text animate-up delay-1">
             <h2 class="section-subtitle">Onze Erfenis</h2>
             <h3 class="section-title-large">Toonaangevend aannemersbedrijf in de regio</h3>
             <p>Van der Meer Dienstengroep B.V. is gespecialiseerd in diverse en complexe bouwprojecten. Met een absolute focus op kwaliteit en klanttevredenheid streven we er dagelijks naar om de hoogste standaarden in de markt te zetten.</p>
-            <p>Onze missie is geworteld in traditioneel vakmanschap, gecombineerd met de modernste bouwtechnieken. Wij geloven dat elk pand, van historisch monument tot moderne woning, de allerbeste zorg en precisie verdient.</p>
+            <p>Onze missie is geworteld in traditioneel vakmanschap, gecombineerd met de modernste bouwtechnieken. Wij geloven dat elk pand de allerbeste zorg en precisie verdient.</p>
             
             <div class="stats-container">
                 <div class="stat-box">
@@ -69,7 +66,6 @@
         </div>
     </section>
 
-    <!-- DIENSTEN PRINCIPALES (Glassmorphism Cards) -->
     <section id="diensten" class="services-container">
         <div class="section-title animate-up">
             <h2 class="section-subtitle">Onze Specialisaties</h2>
@@ -78,26 +74,156 @@
         </div>
         
         <div class="services-grid">
-            <a href="gevel-restauratie.html" class="service-card-link animate-up delay-1"><div class="service-card"><div class="img-wrapper"><img src="img/Gevelreinigen-met-hogendruk-1.jpeg" alt="Gevel Renovatie" class="card-img" loading="lazy"></div><div class="card-content"><h3>Gevel Renovatie</h3><p>Meer dan 25 jaar expertise. Inclusief hogedruk reinigen, impregneren en vakkundig voegen.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="ornamenten.html" class="service-card-link animate-up delay-2"><div class="service-card"><div class="img-wrapper"><img src="img/Ornamentpand-restauratie-1.jpeg" alt="Ornamenten Herstellen" class="card-img" loading="lazy"></div><div class="card-content"><h3>Ornamenten Herstellen</h3><p>Authentieke beelden en ornamenten worden door de hand van de meester in oude glorie hersteld.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="aanbouw.html" class="service-card-link animate-up delay-3"><div class="service-card"><div class="img-wrapper"><img src="img/Uitbouw-1.jpeg" alt="Aanbouw en Uitbouw" class="card-img" loading="lazy"></div><div class="card-content"><h3>Aanbouw & Uitbouw</h3><p>Vergroot uw leefruimte met een naadloze en professioneel afgewerkte aanbouw.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="staalconstructies.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Staalportaal-achtergevel-1.jpeg" alt="Staalconstructies" class="card-img" loading="lazy"></div><div class="card-content"><h3>Staalconstructies</h3><p>Robuuste, veilige en op maat gemaakte staalconstructies voor veeleisende projecten.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="balkon.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Balkon-ondersteuning-herstellen-en-restaureren-1.jpeg" alt="Balkon Restauraties" class="card-img" loading="lazy"></div><div class="card-content"><h3>Balkon Restauraties</h3><p>Duurzaam en veilig herstel van balkondragers en ondersteuningen.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="fundering.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Fundering-1.jpeg" alt="Fundering" class="card-img" loading="lazy"></div><div class="card-content"><h3>Fundering</h3><p>Betrouwbaar funderingsherstel en professionele aanleg als solide, veilige basis.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="kozijnen.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Kozijnen-renovatie-inclusief-stuckwerk,-isolatie-en-trespa-delen-1.jpeg" alt="Kozijnen" class="card-img" loading="lazy"></div><div class="card-content"><h3>Kozijnen</h3><p>Vakkundige plaatsing en renovatie van kozijnen, inclusief perfecte isolatie.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="badkamer.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Badkamer-renovatie-1.jpeg" alt="Badkamer Renovatie" class="card-img" loading="lazy"></div><div class="card-content"><h3>Badkamer Renovatie</h3><p>Complete transformatie van uw badkamer, inclusief exclusief tegelwerk en luxe afwerking.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="dak-schoorsteen.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Dakrenovatie-Prinsengracht-1.jpeg" alt="Dak en Schoorsteen" class="card-img" loading="lazy"></div><div class="card-content"><h3>Dak & Schoorsteen</h3><p>Specialisten in dakrenovaties en het authentiek herstellen van schoorstenen.</p><span class="read-more">Ontdek projecten</span></div></div></a>
-            <a href="schilderwerk-hout.html" class="service-card-link animate-up"><div class="service-card"><div class="img-wrapper"><img src="img/Schilderwerk-Hoek-Prinsengracht-1.jpeg" alt="Schilderwerk en Hout" class="card-img" loading="lazy"></div><div class="card-content"><h3>Schilderwerk & Hout</h3><p>Hoogwaardig schilderwerk en specialistisch herstel van houten balken.</p><span class="read-more">Ontdek projecten</span></div></div></a>
+            <a href="gevel-restauratie.html" class="service-card-link animate-up delay-1">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Gevelreinigen-met-hogendrukspuit-index.jpeg" alt="Gevel Renovatie" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Gevel Renovatie</h3>
+                        <p>Inclusief professioneel hogedruk reinigen en impregneren voor langdurige bescherming.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="snijvoeg.html" class="service-card-link animate-up delay-2">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Herstel-snijvoegwerk-index.jpeg" alt="Snijvoegwerk" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Snijvoegwerk</h3>
+                        <p>Klassiek herstelwerk, knipvoegen en ambachtelijk snijvoegwerk voor een authentieke uitstraling.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ornamenten.html" class="service-card-link animate-up delay-3">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Ornamentpand-index.jpeg" alt="Ornamenten Herstellen" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ornamenten Herstellen</h3>
+                        <p>Authentieke beelden en historische ornamenten worden vakkundig in oude glorie hersteld.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="aanbouw.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Uitbouw-index.jpeg" alt="Aanbouw en Uitbouw" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Aanbouw & Uitbouw</h3>
+                        <p>Vergroot uw leefruimte met een naadloze en professioneel afgewerkte aanbouw.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="staalconstructies.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Stalen-lateien-herstel-Restauratie-index.jpeg" alt="Staalconstructies" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Staalconstructies</h3>
+                        <p>Robuuste, veilige en op maat gemaakte staalconstructies voor veeleisende projecten.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="balkon.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Balkon-ondersteuning-herstellen-en-restaureren-1.jpeg" alt="Balkon Restauraties" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Balkon Restauraties</h3>
+                        <p>Duurzaam en veilig herstel van balkondragers, betonrot en ondersteuningen.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="fundering.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Fundering-index.jpeg" alt="Fundering" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Fundering</h3>
+                        <p>Betrouwbaar funderingsherstel en professionele aanleg als solide, veilige basis.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="kozijnen.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Kozijnen-renovatie-inclusief-stuckwerk,-isolatie-en-trespa-delen-index.jpeg" alt="Kozijnen" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kozijnen</h3>
+                        <p>Vakkundige plaatsing en renovatie van kozijnen, inclusief perfecte isolatie.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="badkamer.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Badkamer-renovatie-index.jpeg" alt="Badkamer Renovatie" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Badkamer Renovatie</h3>
+                        <p>Complete transformatie van uw badkamer, inclusief exclusief tegelwerk en luxe afwerking.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="dak-schoorsteen.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Schoorsteen-index-principal-(1).jpeg" alt="Dak en Schoorsteen" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Dak & Schoorsteen</h3>
+                        <p>Specialisten in dakrenovaties en het authentiek herstellen van schoorstenen.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="schilderwerk-hout.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper">
+                        <img src="img/Schilderwerk-index.jpeg" alt="Schilderwerk en Hout" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Schilderwerk & Hout</h3>
+                        <p>Hoogwaardig schilderwerk en specialistisch herstel van houten balken.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 
-    <!-- BANNER DE CITA PREMIUM -->
     <section class="quote-section animate-up">
         <blockquote>"Kwaliteit is geen toeval, het is het resultaat van passie, precisie en jarenlang ononderbroken vakmanschap."</blockquote>
         <cite>— Johan van der Meer</cite>
     </section>
 
-    <!-- FOOTER -->
     <footer id="contact" class="footer">
         <div class="footer-grid">
             <div class="footer-info">
@@ -107,19 +233,24 @@
             <div class="footer-contact">
                 <h3 style="font-family: 'Playfair Display', serif; color: white;">Contact</h3>
                 <ul>
-                    <li>📍 Ohmstraat 10, 1446 TD Purmerend</li>
-                    <li>📞 075-6152909</li>
-                    <li>✉️ postmaster@vandermeerdienstengroep.nl</li>
+                    <li>📍 Gerrit Bolkade 64G, Zaandam</li>
+                    <li>📞 06-18015806</li>
+                    <li>✉️ Info@vandermeerdienstengroep.nl</li>
                 </ul>
             </div>
             <div class="footer-action">
                 <h3 style="font-family: 'Playfair Display', serif; color: white;">Klaar voor uw project?</h3>
-                <a href="mailto:postmaster@vandermeerdienstengroep.nl" class="btn-primary">Offerte Aanvragen</a>
+                <a href="mailto:Info@vandermeerdienstengroep.nl" class="btn-primary">Offerte Aanvragen</a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Van der Meer Dienstengroep B.V. | Alle rechten voorbehouden.</p>
         </div>
     </footer>
+
+    <a href="https://wa.me/31618015806" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        WhatsApp
+    </a>
 </body>
 </html>
