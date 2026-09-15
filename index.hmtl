@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Van der Meer Dienstengroep B.V. - Toonaangevend aannemersbedrijf in Amsterdam en omstreken.">
+    <title>Van der Meer Dienstengroep | Aannemersbedrijf & Restauratie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            VAN DER MEER <span class="gold-text">DIENSTENGROEP</span>
+        </div>
+        <nav class="desktop-nav">
+            <a href="#over-ons">Over Ons</a>
+            <a href="aanvullende-diensten.html">Diensten</a>
+            <a href="werkwijze.html">Werkwijze</a>
+            <a href="#contact" class="btn-primary">Offerte Aanvragen</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="background-image: linear-gradient(180deg, rgba(8,8,8,0.7) 0%, rgba(8,8,8,0.95) 100%), url('img/Pand-restauratie-1.jpeg');">
+        <div class="hero-content animate-up">
+            <div class="badge">VCA Gecertificeerd Vakmanschap</div>
+            <h1>Meesters in <br><span class="gold-text">Restauratie & Bouwkunde</span></h1>
+            <p>Al meer dan 25 jaar actief in het renoveren van gevels en complexe bouwprojecten. Van robuuste staalconstructies tot verfijnde restauraties door de hand van de meester.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary pulse-effect">Vrijblijvende Offerte</a>
+                <a href="#diensten" class="btn-secondary">Bekijk Onze Specialisaties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVER ONS (Con Stats de Autoridad) -->
+    <section id="over-ons" class="about-container">
+        <div class="about-text animate-up delay-1">
+            <h2 class="gold-text">Over Ons</h2>
+            <h3 style="color: white; font-size: 2.2rem; margin-bottom: 25px; line-height: 1.2;">Toonaangevend aannemersbedrijf in de regio</h3>
+            <p>Van der Meer Dienstengroep B.V. is gespecialiseerd in diverse en complexe bouwprojecten. Met een absolute focus op kwaliteit en klanttevredenheid streven we er dagelijks naar om uw verwachtingen te overtreffen.</p>
+            <p>Onze achtergrond en missie zijn geworteld in traditioneel vakmanschap, gecombineerd met de modernste bouwtechnieken. Wij geloven dat elk pand, van historisch monument tot moderne woning, de allerbeste zorg verdient.</p>
+            
+            <!-- Trust Bar / Stats -->
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Jaren Ervaring</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Vakmanschap</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">VCA</span>
+                    <span class="stat-label">Gecertificeerd</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-image animate-up delay-2">
+            <!-- Foto 100% real de Johan para evitar fallos -->
+            <img src="img/Ornamentpand-Restauratie-Pieter-Cornelis-hoofdstraat-1.2.jpeg" alt="Vakmanschap en Architectuur" loading="lazy">
+        </div>
+    </section>
+
+    <!-- DIENSTEN PRINCIPALES (10 Especialidades) -->
+    <section id="diensten" class="services-container">
+        <div class="section-title animate-up">
+            <h2 class="gold-text">Onze Specialisaties</h2>
+            <p>De kern van ons vakmanschap</p>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="services-grid">
+            <a href="gevel-restauratie.html" class="service-card-link animate-up delay-1"><div class="service-card"><img src="img/Gevelreinigen-met-hogendruk-1.jpeg" alt="Gevel Renovatie" class="card-img" loading="lazy"><div class="card-content"><h3>Gevel Renovatie</h3><p>Meer dan 25 jaar expertise. Inclusief hogedruk reinigen, impregneren en vakkundig voegen.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="ornamenten.html" class="service-card-link animate-up delay-2"><div class="service-card"><img src="img/Ornamentpand-restauratie-1.jpeg" alt="Ornamenten Herstellen" class="card-img" loading="lazy"><div class="card-content"><h3>Ornamenten Herstellen</h3><p>Authentieke beelden en ornamenten worden door de hand van de meester in oude glorie hersteld.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="aanbouw.html" class="service-card-link animate-up delay-3"><div class="service-card"><img src="img/Uitbouw-1.jpeg" alt="Aanbouw en Uitbouw" class="card-img" loading="lazy"><div class="card-content"><h3>Aanbouw & Uitbouw</h3><p>Vergroot uw leefruimte met een naadloze en professioneel afgewerkte aanbouw.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="staalconstructies.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Staalportaal-achtergevel-1.jpeg" alt="Staalconstructies" class="card-img" loading="lazy"><div class="card-content"><h3>Staalconstructies</h3><p>Robuuste, veilige en op maat gemaakte staalconstructies voor veeleisende projecten.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="balkon.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Balkon-ondersteuning-herstellen-en-restaureren-1.jpeg" alt="Balkon Restauraties" class="card-img" loading="lazy"><div class="card-content"><h3>Balkon Restauraties</h3><p>Duurzaam en veilig herstel van balkondragers en ondersteuningen.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="fundering.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Fundering-1.jpeg" alt="Fundering" class="card-img" loading="lazy"><div class="card-content"><h3>Fundering</h3><p>Betrouwbaar funderingsherstel en professionele aanleg als solide, veilige basis.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="kozijnen.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Kozijnen-renovatie-inclusief-stuckwerk,-isolatie-en-trespa-delen-1.jpeg" alt="Kozijnen" class="card-img" loading="lazy"><div class="card-content"><h3>Kozijnen</h3><p>Vakkundige plaatsing en renovatie van kozijnen, inclusief perfecte isolatie.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="badkamer.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Badkamer-renovatie-1.jpeg" alt="Badkamer Renovatie" class="card-img" loading="lazy"><div class="card-content"><h3>Badkamer Renovatie</h3><p>Complete transformatie van uw badkamer, inclusief exclusief tegelwerk en luxe afwerking.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="dak-schoorsteen.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Dakrenovatie-Prinsengracht-1.jpeg" alt="Dak en Schoorsteen" class="card-img" loading="lazy"><div class="card-content"><h3>Dak & Schoorsteen</h3><p>Specialisten in dakrenovaties en het authentiek herstellen van schoorstenen.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+            <a href="schilderwerk-hout.html" class="service-card-link animate-up"><div class="service-card"><img src="img/Schilderwerk-Hoek-Prinsengracht-1.jpeg" alt="Schilderwerk en Hout" class="card-img" loading="lazy"><div class="card-content"><h3>Schilderwerk & Hout</h3><p>Hoogwaardig schilderwerk en specialistisch herstel van houten balken.</p><span class="read-more">Bekijk projecten & info →</span></div></div></a>
+        </div>
+    </section>
+
+    <!-- BANNER DE CITA PREMIUM -->
+    <section class="quote-section animate-up">
+        <blockquote>"Kwaliteit is geen toeval, het is het resultaat van passie, precisie en jarenlang vakmanschap."</blockquote>
+        <cite>— Johan van der Meer</cite>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h3 class="gold-text">Van der Meer Dienstengroep B.V.</h3>
+                <p>Uw betrouwbare partner in de bouw, met een focus op kwaliteit, veiligheid en transparante communicatie.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contactgegevens</h3>
+                <ul>
+                    <li>📍 Ohmstraat 10, 1446 TD Purmerend</li>
+                    <li>📞 075-6152909</li>
+                    <li>✉️ postmaster@vandermeerdienstengroep.nl</li>
+                </ul>
+            </div>
+            <div class="footer-action">
+                <h3>Klaar voor uw project?</h3>
+                <a href="mailto:postmaster@vandermeerdienstengroep.nl" class="btn-primary">Neem direct contact op</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Van der Meer Dienstengroep B.V. | Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+</html>
