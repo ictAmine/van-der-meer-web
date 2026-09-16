@@ -558,3 +558,8 @@ h1, h2, h3, .section-title-large {
     .whatsapp-float { bottom: 20px; right: 20px; padding: 10px 15px; font-size: 0.9rem; }
 }
 @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+
+/* Utilidad para encuadrar imágenes altas en las tarjetas */
+.card-img.align-top {
+    object-position: center 20%;
+}
