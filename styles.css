@@ -70,6 +70,7 @@ h1, h2, h3, .section-title-large {
 .header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    gap: 40px; /* Añadido para forzar separación pase lo que pase */
     align-items: center;
     padding: 20px 5%;
     background-color: rgba(7, 7, 7, 0.85);
