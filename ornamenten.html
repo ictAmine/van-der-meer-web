@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restauratie werk | Van der Meer Dienstengroep</title>
     <meta name="description" content="Vakkundige restauratie van historische gevelornamenten, houtwerk en beton. Behoud het authentieke karakter van uw pand met ambachtelijk handwerk.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- SEO Local Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Van der Meer Dienstengroep B.V.",
+      "description": "Uw partner in high-end bouw en restauratie in Amsterdam en omstreken.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gerrit Bolkade 64G",
+        "addressLocality": "Zaandam",
+        "addressCountry": "NL"
+      },
+      "telephone": "+31756152909",
+      "email": "Info@vandermeerdienstengroep.nl",
+      "url": "https://vandermeerdienstengroep.nl"
+    }
+    </script>
 </head>
 <body>
     <header class="header">
-        <div class="logo">VAN DER MEER <span class="gold-text">DIENSTENGROEP</span></div>
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
+            <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
+        </a>
         <nav class="center-nav">
             <a href="index.html#over-ons">Over Ons</a>
             <a href="index.html#diensten">Specialisaties</a>
@@ -20,7 +43,7 @@
         <div class="header-cta"><a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a></div>
     </header>
 
-    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.6) 0%, rgba(7,7,7,1) 100%), url('img/Ornamentpand-index.jpeg');">
+    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.6) 0%, rgba(7,7,7,1) 100%), url('img/Ornamentpand-index.webp');">
         <div class="hero-content animate-up">
             <h1 class="gold-text">Restauratie werk</h1>
             <p>Wij herstellen historische ornamenten, houtwerk en beton met uiterste precisie en respect voor het oorspronkelijke karakter van uw pand.</p>
@@ -54,10 +77,10 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
             <div style="border: 1px solid rgba(255,255,255,0.05); border-radius: 4px; overflow: hidden; background: #000;">
-                <img src="img/restauratie-erbij.jpeg" alt="Restauratie van een klassiek gevelornament" style="width: 100%; height: auto; display: block; filter: grayscale(10%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(10%)'" loading="lazy">
+                <img fetchpriority="high" src="img/restauratie-erbij.webp" alt="Restauratie van een klassiek gevelornament" style="width: 100%; height: auto; display: block; filter: grayscale(10%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(10%)'" >
             </div>
             <div style="border: 1px solid rgba(255,255,255,0.05); border-radius: 4px; overflow: hidden; background: #000;">
-                <img src="img/restauratie-erbij-1.2.jpeg" alt="Gedetailleerd modelleerwerk ornament" style="width: 100%; height: auto; display: block; filter: grayscale(10%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(10%)'" loading="lazy">
+                <img fetchpriority="high" src="img/restauratie-erbij-1.2.webp" alt="Gedetailleerd modelleerwerk ornament" style="width: 100%; height: auto; display: block; filter: grayscale(10%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(10%)'" >
             </div>
         </div>
     </section>
@@ -69,10 +92,36 @@
             <div class="divider"></div>
         </div>
         <div class="masonry-grid animate-up delay-3">
-            <img src="img/Ornamenten-toevoegen.jpeg" alt="Restauratiewerk gevel en ornamenten" loading="lazy">
-            <img src="img/Ornamentpand-Restauratie-Pieter-Cornelis-hoofdstraat-1.jpeg" alt="Ornamenten Restauratie Pieter Cornelisz" loading="lazy">
-            <img src="img/Ornamentpand-Restauratie-Pieter-Cornelis-hoofdstraat-1.2.jpeg" alt="Ornamenten Restauratie Detail" loading="lazy">
-            <img src="img/Ornamentpand-restauratie-1.5.jpeg" alt="Restauratie gevel details" loading="lazy">
+            <img fetchpriority="high" src="img/restau-1.2.webp" alt="Restauratiewerk overzicht" >
+            <img fetchpriority="high" src="img/restau-1.3.webp" alt="Restauratiewerk overzicht" >
+            <img src="img/restau-1.4.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-1.5.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-1.6.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-1.7.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-1.8.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-1.9.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-1.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.0.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.1.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.2.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.3.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.4.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.5.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.6.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.7.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.8.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-2.9.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau-3.0.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restau.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <a href="img/restauratie-3d.webp" target="_blank" style="display: block; cursor: zoom-in;" title="Klik om in te zoomen op de tekening"><img src="img/restauratie-3d.webp" alt="Bouwtekening 3D" loading="lazy"></a>
+            <img src="img/restauratie-toe-1.2.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restauratie-toe-1.3.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restauratie-toe-1.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/restauratie-toe.webp" alt="Restauratiewerk overzicht" loading="lazy">
+            <img src="img/Ornamenten-toevoegen.webp" alt="Restauratiewerk gevel en ornamenten" loading="lazy">
+            <img src="img/Ornamentpand-Restauratie-Pieter-Cornelis-hoofdstraat-1.webp" alt="Ornamenten Restauratie Pieter Cornelisz" loading="lazy">
+            <img src="img/Ornamentpand-Restauratie-Pieter-Cornelis-hoofdstraat-1.2.webp" alt="Ornamenten Restauratie Detail" loading="lazy">
+            <img src="img/Ornamentpand-restauratie-1.5.webp" alt="Restauratie gevel details" loading="lazy">
         </div>
     </section>
 
@@ -86,7 +135,7 @@
                 <h3 style="font-family: 'Playfair Display', serif; color: white; margin-bottom: 15px;">Contact</h3>
                 <ul>
                     <li>📍 Gerrit Bolkade 64G, Zaandam</li>
-                    <li>📞 06-18015806</li>
+                    <li>📞 06-18015806 / 075-6152909</li>
                     <li>✉️ Info@vandermeerdienstengroep.nl</li>
                 </ul>
             </div>

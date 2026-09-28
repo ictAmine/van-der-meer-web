@@ -5,12 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schilderwerk & Stucwerk | Van der Meer Dienstengroep</title>
     <meta name="description" content="Professioneel binnen- en buitenschilderwerk en strak stucwerk in Amsterdam. Kwaliteit en oog voor detail door Van der Meer Dienstengroep.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- SEO Local Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Van der Meer Dienstengroep B.V.",
+      "description": "Uw partner in high-end bouw en restauratie in Amsterdam en omstreken.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gerrit Bolkade 64G",
+        "addressLocality": "Zaandam",
+        "addressCountry": "NL"
+      },
+      "telephone": "+31756152909",
+      "email": "Info@vandermeerdienstengroep.nl",
+      "url": "https://vandermeerdienstengroep.nl"
+    }
+    </script>
+
+    <style>
+        /* Fondo de reseñas rediseñado a Espresso-Mahogany de alto contraste */
+        .reviews-section {
+            background: linear-gradient(to bottom, #1c1210 0%, #0d0807 100%) !important;
+            border-top: 2px solid var(--gold) !important;
+            position: relative;
+        }
+        /* Tarjetas con efecto Glassmorphism y animación de elevación */
+        .review-card {
+            background: rgba(28, 18, 16,  0.65) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2) !important;
+            border-left: 3px solid var(--gold) !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        }
+        .review-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold) !important;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15) !important;
+        }
+    </style>
 </head>
+
 <body>
     <header class="header">
-        <div class="logo">VAN DER MEER <span class="gold-text">DIENSTENGROEP</span></div>
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
+            <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
+        </a>
         <nav class="center-nav">
             <a href="over-ons.html">Over Ons</a>
             <a href="index.html#diensten">Specialisaties</a>
@@ -20,7 +67,7 @@
         <div class="header-cta"><a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a></div>
     </header>
 
-    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,1) 100%), url('img/Schilderwerk-index.jpeg'); background-attachment: scroll; background-position: center 30%; background-size: cover;">
+    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,1) 100%), url('img/Schilderwerk-index.webp'); background-attachment: scroll; background-position: center 30%; background-size: cover;">
         <div class="hero-content animate-up">
             <h1 class="gold-text">Schilderwerk & Stucwerk</h1>
             <p>Professioneel schilderwerk en strak stucwerk voor binnen en buiten. Kwaliteit en oog voor detail staan bij ons voorop.</p>
@@ -45,10 +92,77 @@
             <div class="divider"></div>
         </div>
         <div class="masonry-grid animate-up delay-2">
-            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.jpeg" alt="Schilderwerk" loading="lazy">
-            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.2.jpeg" alt="Schilderwerk" loading="lazy">
-            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.3.jpeg" alt="Schilderwerk" loading="lazy">
-            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.4.jpeg" alt="Schilderwerk" loading="lazy">
+            <img fetchpriority="high" src="img/schilder-1.webp" alt="Schilderwerk 1" >
+            <img fetchpriority="high" src="img/schilder-2.webp" alt="Schilderwerk 2" >
+            <img fetchpriority="high" src="img/schilder-3.webp" alt="Schilderwerk 3" >
+            <img fetchpriority="high" src="img/schilder-4.webp" alt="Schilderwerk 4" >
+            <img src="img/schilder-5.webp" alt="Schilderwerk 5" loading="lazy">
+            <img src="img/schilder-6.webp" alt="Schilderwerk 6" loading="lazy">
+            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.webp" alt="Schilderwerk" loading="lazy">
+            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.2.webp" alt="Schilderwerk" loading="lazy">
+            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.3.webp" alt="Schilderwerk" loading="lazy">
+            <img src="img/Schilderwerk-Hoek-Prinsengracht-1.4.webp" alt="Schilderwerk" loading="lazy">
+        </div>
+    </section>
+
+    
+    <section class="reviews-section" style="background: linear-gradient(to bottom, #1c1210 0%, #0d0807 100%); padding: 80px 20px; border-top: 2px solid var(--gold);">
+        <div class="section-title animate-up" style="text-align: center; margin-bottom: 50px;">
+            <h2 class="section-subtitle" style="color: var(--gold);">Klantbeoordelingen</h2>
+            <h3 class="section-title-large" style="color: white; font-size: 2.5rem;">Wat Onze Klanten Zeggen</h3>
+            <div class="divider" style="margin: 20px auto;"></div>
+        </div>
+        <div class="reviews-grid animate-up delay-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto;">
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Wij hebben een uitbouw laten plaatsen en meteen onze gevel laten renoveren aan de Keizersgracht 573 Amsterdam. Alles is perfect uitgevoerd en het huis ziet er weer als nieuw uit. Het team van Van der Meer Dienstengroep werkt netjes en komt afspraken na. Zeker een aanrader!"</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Jan de Vries</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Top aannemersbedrijf! Onze aanbouw en dakwerkzaamheden zijn netjes uitgevoerd. Goede communicatie tijdens het hele project en alles werd netjes opgeleverd. We zijn erg tevreden met het resultaat."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Linda Bakker</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Voor de renovatie van onze woning hebben we dit bedrijf ingeschakeld. Ze hebben het dak vernieuwd ,ook de gevel aangepakt en alle gevelankers hersteld van schade. Vakmensen die weten wat ze doen."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Raymond Vischjager</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Heel blij met onze nieuwe uitbouw aan de zuideinde 277 Oostzaan. Daarnaast hebben ze ook het dak gecontroleerd en kleine reparaties uitgevoerd en een nieuwe afvoergootje geplaatst. Alles werd duidelijk uitgelegd en netjes afgewerkt."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Marieke van Dijk</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Betrouwbaar bedrijf met echte vakmensen. Bij ons hebben ze een aanbouw geplaatst en de gevel opnieuw gevoegd. Het resultaat is prachtig."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Rowena Smith</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Onze dakrenovatie is perfect uitgevoerd. Ze werken snel, netjes en houden zich aan de afspraken. Fijn bedrijf om mee samen te werken."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Anouk Meijer</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Wij hebben onze gevel laten reinigen met de hogedruk en opnieuw laten voegen. Het verschil is enorm. Professioneel, snel team en goede service."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Erik Mulder</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Tijdens de renovatie van ons huis hebben ze zowel de uitbouw als het dakwerk verzorgd. Alles verliep soepel en het eindresultaat is boven verwachting."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Sanne de Boer</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Heel tevreden over de werkzaamheden aan ons dak en de gevel. Goede prijs-kwaliteitverhouding en duidelijke communicatie."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Mark Visser</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Wij raden Van der Meer Dienstengroep zeker aan. Ze hebben bij ons een aanbouw gemaakt en de gevel gerenoveerd aan de Prinsengracht 1051. Alles werd professioneel uitgevoerd."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Karin Bos</h4>
+            </div>
         </div>
     </section>
 
@@ -62,7 +176,7 @@
                 <h3 style="font-family: 'Playfair Display', serif; color: white; margin-bottom: 15px;">Contact</h3>
                 <ul>
                     <li>📍 Gerrit Bolkade 64G, Zaandam</li>
-                    <li>📞 06-18015806</li>
+                    <li>📞 06-18015806 / 075-6152909</li>
                     <li>✉️ Info@vandermeerdienstengroep.nl</li>
                 </ul>
             </div>

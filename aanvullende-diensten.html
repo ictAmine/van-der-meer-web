@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aanvullende Diensten | Van der Meer Dienstengroep</title>
     <meta name="description" content="Aanvullende diensten van Van der Meer Dienstengroep: van high-end nieuwbouw en totaalrenovatie tot vastgoedonderhoud en bouwkundig advies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- SEO Local Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Van der Meer Dienstengroep B.V.",
+      "description": "Uw partner in high-end bouw en restauratie in Amsterdam en omstreken.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gerrit Bolkade 64G",
+        "addressLocality": "Zaandam",
+        "addressCountry": "NL"
+      },
+      "telephone": "+31756152909",
+      "email": "Info@vandermeerdienstengroep.nl",
+      "url": "https://vandermeerdienstengroep.nl"
+    }
+    </script>
 </head>
 <body>
     <header class="header">
-        <div class="logo">VAN DER MEER <span class="gold-text">DIENSTENGROEP</span></div>
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
+            <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
+        </a>
         <nav class="center-nav">
             <a href="index.html#over-ons">Over Ons</a>
             <a href="index.html#diensten">Specialisaties</a>
@@ -20,7 +43,7 @@
         <div class="header-cta"><a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a></div>
     </header>
 
-    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.6) 0%, rgba(7,7,7,1) 100%), url('img/Ornamentpand-Restauratie-Pieter-Cornelis-hoofdstraat-1.jpeg'); background-attachment: scroll; background-position: center 30%; background-size: cover;">
+    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(13,8,7,0.4) 0%, rgba(13,8,7,0.85) 100%), url('img/Schilderwerk-index.webp'); background-position: center center; background-size: cover;">
         <div class="hero-content animate-up">
             <h1 class="gold-text">Aanvullende Diensten</h1>
             <p>Van nieuwbouw tot deskundig advies. Wij bieden totaaloplossingen voor elk facet van uw vastgoed, uitgevoerd met de hoogste precisie.</p>
@@ -32,7 +55,7 @@
             
             <div class="service-card animate-up delay-1">
                 <div class="img-wrapper">
-                    <img src="img/Uitbouw-1.2.jpeg" alt="Nieuwbouw" class="card-img" loading="lazy">
+                    <img fetchpriority="high" src="img/Uitbouw-1.2.webp" alt="Nieuwbouw" class="card-img" >
                 </div>
                 <div class="card-content">
                     <h3>Nieuwbouw</h3>
@@ -42,7 +65,7 @@
 
             <div class="service-card animate-up delay-2">
                 <div class="img-wrapper">
-                    <img src="img/Ornamentpand-restauratie-1.5.jpeg" alt="Totaal Renovatie" class="card-img" loading="lazy">
+                    <img fetchpriority="high" src="img/Ornamentpand-restauratie-1.5.webp" alt="Totaal Renovatie" class="card-img" >
                 </div>
                 <div class="card-content">
                     <h3>Totaal Renovatie</h3>
@@ -52,7 +75,7 @@
 
             <div class="service-card animate-up delay-3">
                 <div class="img-wrapper">
-                    <img src="img/Dakrenovatie-Prinsengracht-1.5.jpeg" alt="Vastgoed Onderhoud" class="card-img" loading="lazy">
+                    <img fetchpriority="high" src="img/Dakrenovatie-Prinsengracht-1.5.webp" alt="Vastgoed Onderhoud" class="card-img" >
                 </div>
                 <div class="card-content">
                     <h3>Vastgoed Onderhoud</h3>
@@ -62,7 +85,7 @@
 
             <div class="service-card animate-up">
                 <div class="img-wrapper">
-                    <img src="img/Herstel-Voegwerk-Appololaan-1.2.jpeg" alt="Bouwkundig Advies" class="card-img" loading="lazy">
+                    <img fetchpriority="high" src="img/Herstel-Voegwerk-Appololaan-1.2.webp" alt="Bouwkundig Advies" class="card-img" >
                 </div>
                 <div class="card-content">
                     <h3>Bouwkundig Advies</h3>
@@ -72,7 +95,7 @@
 
             <div class="service-card animate-up">
                 <div class="img-wrapper">
-                    <img src="img/Staalportaal-achtergevel-1.jpeg" alt="Staalconstructie & Lateien" class="card-img" loading="lazy">
+                    <img src="img/Staalportaal-achtergevel-1.webp" alt="Staalconstructie & Lateien" class="card-img" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h3>Staalconstructie & Lateien</h3>
@@ -92,7 +115,7 @@
                 <h3 style="font-family: 'Playfair Display', serif; color: white; margin-bottom: 15px;">Contact</h3>
                 <ul>
                     <li>📍 Gerrit Bolkade 64G, Zaandam</li>
-                    <li>📞 06-18015806</li>
+                    <li>📞 06-18015806 / 075-6152909</li>
                     <li>✉️ Info@vandermeerdienstengroep.nl</li>
                 </ul>
             </div>

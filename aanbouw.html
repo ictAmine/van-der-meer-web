@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aanbouw & Uitbouw | Van der Meer Dienstengroep</title>
     <meta name="description" content="Luxe uitbouw en aanbouw op maat in Amsterdam. Van 3D ontwerp en houtskeletbouw tot sleutelklare oplevering door Van der Meer Dienstengroep.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- SEO Local Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Van der Meer Dienstengroep B.V.",
+      "description": "Uw partner in high-end bouw en restauratie in Amsterdam en omstreken.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gerrit Bolkade 64G",
+        "addressLocality": "Zaandam",
+        "addressCountry": "NL"
+      },
+      "telephone": "+31756152909",
+      "email": "Info@vandermeerdienstengroep.nl",
+      "url": "https://vandermeerdienstengroep.nl"
+    }
+    </script>
 </head>
 <body>
     <header class="header">
-        <div class="logo">VAN DER MEER <span class="gold-text">DIENSTENGROEP</span></div>
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
+            <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
+        </a>
         <nav class="center-nav">
             <a href="index.html#over-ons">Over Ons</a>
             <a href="index.html#diensten">Specialisaties</a>
@@ -20,7 +43,7 @@
         <div class="header-cta"><a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a></div>
     </header>
 
-    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.6) 0%, rgba(7,7,7,1) 100%), url('img/Uitbouw-index.jpeg');">
+    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.6) 0%, rgba(7,7,7,1) 100%), url('img/Uitbouw-index.webp');">
         <div class="hero-content animate-up">
             <h1 class="gold-text">Aanbouw & Uitbouw</h1>
             <p>Creëer de ruimte waar u altijd van gedroomd heeft. Een naadloze uitbreiding van uw woning, gerealiseerd met de hoogste bouwstandaarden.</p>
@@ -67,10 +90,10 @@
             
             <div style="display: flex; flex-direction: column; gap: 30px;">
                 <div style="position: relative; border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; background: rgba(10,10,10,0.6); backdrop-filter: blur(5px); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="img/uitbouw-form.jpeg" alt="3D Impressie en Plattegrond Buitenmaten" style="width: 100%; height: auto; display: block; border-radius: 2px;" loading="lazy">
+                    <img fetchpriority="high" src="img/uitbouw-form.webp" alt="3D Impressie en Plattegrond Buitenmaten" style="width: 100%; height: auto; display: block; border-radius: 2px;" >
                 </div>
                 <div style="position: relative; border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; background: rgba(10,10,10,0.6); backdrop-filter: blur(5px); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="img/uitbouw-form-1.2.jpeg" alt="Houtskalet Overzicht 3D en Constructiedetails" style="width: 100%; height: auto; display: block; border-radius: 2px;" loading="lazy">
+                    <img fetchpriority="high" src="img/uitbouw-form-1.2.webp" alt="Houtskalet Overzicht 3D en Constructiedetails" style="width: 100%; height: auto; display: block; border-radius: 2px;" >
                 </div>
             </div>
         </div>
@@ -89,9 +112,9 @@
         </div>
 
         <div class="masonry-grid">
-            <img src="img/aanbouw-erbij.jpeg" alt="Gerealiseerd bijgebouw overzicht" loading="lazy">
-            <img src="img/aanbouw-erbij-1.2.jpeg" alt="Tuinkantoor met terras en strakke afwerking" loading="lazy">
-            <img src="img/aanbouw-erbij-1.3.jpeg" alt="Vakmanschap en een tevreden realisatie" loading="lazy">
+            <img fetchpriority="high" src="img/aanbouw-erbij.webp" alt="Gerealiseerd bijgebouw overzicht" >
+            <img fetchpriority="high" src="img/aanbouw-erbij-1.2.webp" alt="Tuinkantoor met terras en strakke afwerking" >
+            <img src="img/aanbouw-erbij-1.3.webp" alt="Vakmanschap en een tevreden realisatie" loading="lazy">
         </div>
     </section>
 
@@ -108,9 +131,9 @@
         </div>
 
         <div class="masonry-grid">
-            <img src="img/Uitbouw-index.jpeg" alt="Luxe woninguitbreiding zijaanzicht" loading="lazy">
-            <img src="img/uitbouw-erbij-1.2.jpeg" alt="Houten gevelbekleding en strak metselwerk" loading="lazy">
-            <img src="img/uitbouw-erbij-1.3.jpeg" alt="Grote glazen schuifpuien in nieuwe aanbouw" loading="lazy">
+            <img src="img/Uitbouw-index.webp" alt="Luxe woninguitbreiding zijaanzicht" loading="lazy">
+            <img src="img/uitbouw-erbij-1.2.webp" alt="Houten gevelbekleding en strak metselwerk" loading="lazy">
+            <img src="img/uitbouw-erbij-1.3.webp" alt="Grote glazen schuifpuien in nieuwe aanbouw" loading="lazy">
         </div>
     </section>
 
@@ -121,10 +144,10 @@
             <div class="divider"></div>
         </div>
         <div class="masonry-grid animate-up delay-1">
-            <img src="img/Uitbouw-1.2.jpeg" alt="Uitbouw proces" loading="lazy">
-            <img src="img/Uitbouw-1.3.jpeg" alt="Uitbouw proces" loading="lazy">
-            <img src="img/Uitbouw-1.5.jpeg" alt="Uitbouw proces" loading="lazy">
-            <img src="img/Uitbouw-1.6.jpeg" alt="Uitbouw proces" loading="lazy">
+            <img src="img/Uitbouw-1.2.webp" alt="Uitbouw proces" loading="lazy">
+            <img src="img/Uitbouw-1.3.webp" alt="Uitbouw proces" loading="lazy">
+            <img src="img/Uitbouw-1.5.webp" alt="Uitbouw proces" loading="lazy">
+            <img src="img/Uitbouw-1.6.webp" alt="Uitbouw proces" loading="lazy">
         </div>
     </section>
 
@@ -138,7 +161,7 @@
                 <h3 style="font-family: 'Playfair Display', serif; color: white; margin-bottom: 15px;">Contact</h3>
                 <ul>
                     <li>📍 Gerrit Bolkade 64G, Zaandam</li>
-                    <li>📞 06-18015806</li>
+                    <li>📞 06-18015806 / 075-6152909</li>
                     <li>✉️ Info@vandermeerdienstengroep.nl</li>
                 </ul>
             </div>

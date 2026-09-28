@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: ictAmine/van-der-meer-web
+  branch: main
+
+# Ruta donde se guardarán las fotos en tu código
+media_folder: "assets/images/projecten" 
+public_folder: "/assets/images/projecten"
+
+# Interfaz traducida al Holandés para Johan
+collections:
+  - name: "fotos"
+    label: "Nieuwe Projectfoto's" 
+    folder: "_projecten" 
+    create: true
+    fields:
+      - {label: "Titel van het project (bijv. Renovatie Zaandam)", name: "title", widget: "string"}
+      - {label: "Upload de foto", name: "image", widget: "image"}

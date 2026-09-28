@@ -5,14 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Van der Meer Dienstengroep B.V. - Toonaangevend aannemersbedrijf in Amsterdam en omstreken.">
     <title>Van der Meer Dienstengroep | Aannemersbedrijf & Restauratie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Van der Meer Dienstengroep B.V.",
+      "description": "Uw partner in high-end bouw en restauratie in Amsterdam en omstreken.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gerrit Bolkade 64G",
+        "addressLocality": "Zaandam",
+        "addressCountry": "NL"
+      },
+      "telephone": "+31756152909",
+      "email": "Info@vandermeerdienstengroep.nl",
+      "url": "https://vandermeerdienstengroep.nl"
+    }
+    </script>
+
+    <style>
+        .reviews-section {
+            background: linear-gradient(to bottom, #1c1210 0%, #0d0807 100%) !important;
+            border-top: 2px solid var(--gold) !important;
+            position: relative;
+        }
+        .review-card {
+            background: rgba(28, 18, 16,  0.65) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2) !important;
+            border-left: 3px solid var(--gold) !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        }
+        .review-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold) !important;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15) !important;
+        }
+    </style>
 </head>
+
 <body>
     <header class="header">
-        <div class="logo">
-            VAN DER MEER <span class="gold-text">DIENSTENGROEP</span>
-        </div>
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
+            <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
+        </a>
         <nav class="center-nav">
             <a href="over-ons.html">Over Ons</a>
             <a href="#diensten">Specialisaties</a>
@@ -24,7 +66,7 @@
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.9) 100%), url('img/Herstel-Monument-Adelaar-1.jpeg') no-repeat center center; background-size: contain; background-color: #030303;">
+    <section class="hero" style="background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.9) 100%), url('img/Herstel-Monument-Adelaar-1.webp') no-repeat center center; background-size: contain; background-color: #030303;">
         <div class="hero-content animate-up">
             <div class="badge">VCA Gecertificeerd Vakmanschap</div>
             <h1>Meesters in <br><span class="gold-text">Restauratie & Bouwkunde</span></h1>
@@ -62,7 +104,7 @@
         </div>
         <div class="about-image animate-up delay-2">
             <div class="image-frame">
-                <a href="img/Voorkant-index.jpeg" target="_blank" style="display: block; cursor: zoom-in;" title="Klik om de bouwtekening te vergroten"><img src="img/Voorkant-index.jpeg" alt="Vakmanschap en Architectuur" loading="lazy"></a>
+                <a href="img/Voorkant-index.webp" target="_blank" style="display: block; cursor: zoom-in;" title="Klik om de bouwtekening te vergroten"><img fetchpriority="high" src="img/Voorkant-index.webp" alt="Vakmanschap en Architectuur" ></a>
             </div>
         </div>
     </section>
@@ -78,7 +120,7 @@
             <!-- 1. Restauratie werk -->
             <a href="ornamenten.html" class="service-card-link animate-up delay-1">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Ornamentpand-index.jpeg" alt="Restauratie werk" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img fetchpriority="high" src="img/Ornamentpand-index.webp" alt="Restauratie werk" class="card-img" ></div>
                     <div class="card-content">
                         <h3>Restauratie werk</h3>
                         <p>Wij herstellen ornamenten, houtwerk en beton vakkundig en met oog voor detail.</p>
@@ -87,22 +129,10 @@
                 </div>
             </a>
 
-            <!-- 2. Gevel Reiniging/ Hogendruk reinigen -->
-            <a href="gevel-restauratie.html" class="service-card-link animate-up delay-2">
+            <!-- 2. Snijvoegwerk/ Platvol voegen -->
+            <a href="snijvoeg.html" class="service-card-link animate-up delay-2">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Gevelreinigen-met-hogendrukspuit-index.jpeg" alt="Gevel Reiniging" class="card-img" loading="lazy"></div>
-                    <div class="card-content">
-                        <h3>Gevel Reiniging/ Hogendruk reinigen</h3>
-                        <p>Professioneel reinigen, onderhoud en duurzaam herstel voor een onberispelijke uitstraling van uw pand.</p>
-                        <span class="read-more">Ontdek projecten</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- 3. Snijvoegwerk/ Platvol voegen -->
-            <a href="snijvoeg.html" class="service-card-link animate-up delay-3">
-                <div class="service-card">
-                    <div class="img-wrapper"><img src="img/snijvoeg-erbij.jpeg" alt="Snijvoegwerk" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img fetchpriority="high" src="img/snijvoeg-erbij.webp" alt="Snijvoegwerk" class="card-img" ></div>
                     <div class="card-content">
                         <h3>Snijvoegwerk/ Platvol voegen</h3>
                         <p>Klassiek herstelwerk, platvol voegen en ambachtelijk snijvoegwerk voor monumentale panden.</p>
@@ -111,10 +141,10 @@
                 </div>
             </a>
 
-            <!-- 4. Staalconstructie en lateien -->
-            <a href="staalconstructies.html" class="service-card-link animate-up">
+            <!-- 3. Staalconstructie en lateien -->
+            <a href="staalconstructies.html" class="service-card-link animate-up delay-3">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Balkherstel-keizersgracht-1.jpeg" alt="Staalconstructie en lateien" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Balkherstel-keizersgracht-1.webp" alt="Staalconstructie en lateien" class="card-img" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Staalconstructie en lateien</h3>
                         <p>Realisatie en herstel bij verzakking voor een veilige en stabiele ondersteuning.</p>
@@ -123,10 +153,10 @@
                 </div>
             </a>
 
-            <!-- 5. Uitbouw/Aanbouw -->
+            <!-- 4. Uitbouw/Aanbouw -->
             <a href="aanbouw.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/uitbouw.erbij.jpeg" alt="Uitbouw/Aanbouw" class="card-img align-top" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/uitbouw.erbij.webp" alt="Uitbouw/Aanbouw" class="card-img align-top" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Uitbouw/Aanbouw</h3>
                         <p>Professionele uitbouwen op maat voor extra ruimte, comfort en een strakke afwerking.</p>
@@ -135,10 +165,10 @@
                 </div>
             </a>
 
-            <!-- 6. Fundering en Funderingsherstel -->
+            <!-- 5. Fundering en Funderingsherstel -->
             <a href="fundering.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Fundering-index.jpeg" alt="Fundering" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Fundering-index.webp" alt="Fundering" class="card-img" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Fundering en Funderingsherstel</h3>
                         <p>Sterke en betrouwbare funderingen zodat uw bouwproject veilig en stabiel staat.</p>
@@ -147,10 +177,10 @@
                 </div>
             </a>
 
-            <!-- 7. Balkon restauraties -->
+            <!-- 6. Balkon restauraties -->
             <a href="balkon.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Balkon-ondersteuning-herstellen-en-restaureren-1.jpeg" alt="Balkon restauraties" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Balkon-ondersteuning-herstellen-en-restaureren-1.webp" alt="Balkon restauraties" class="card-img" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Balkon restauraties</h3>
                         <p>Duurzaam en veilig herstel van balkondragers, betonrot en dragende constructies.</p>
@@ -159,10 +189,10 @@
                 </div>
             </a>
 
-            <!-- 8. Kozijn renovatie -->
+            <!-- 7. Kozijn renovatie -->
             <a href="kozijnen.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Kozijnen-renovatie-inclusief-stuckwerk,-isolatie-en-trespa-delen-index.jpeg" alt="Kozijn renovatie" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/kozijnen-estasi.webp" alt="Kozijn renovatie" class="card-img" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Kozijn renovatie</h3>
                         <p>Vakkundige levering en renovatie inclusief glas naar keuze en perfecte isolatie.</p>
@@ -171,10 +201,10 @@
                 </div>
             </a>
 
-            <!-- 9. Dak, lekkages en schoorsteen renovatie -->
+            <!-- 8. Dak, lekkages en schoorsteen renovatie -->
             <a href="dak-schoorsteen.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Dakrenovatie-Prinsengracht-index.jpeg" alt="Dak en Schoorsteen" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Dakrenovatie-Prinsengracht-index.webp" alt="Dak en Schoorsteen" class="card-img" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Dak, lekkages en schoorsteen renovatie</h3>
                         <p>Van dakrenovatie en zinkwerk tot snelle lekkageverhelping en schoorsteen restauratie.</p>
@@ -183,10 +213,10 @@
                 </div>
             </a>
 
-            <!-- 10. Badkamer renovatie -->
+            <!-- 9. Badkamer renovatie -->
             <a href="badkamer.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Badkamer-renovatie-index.jpeg" alt="Badkamer renovatie" class="card-img align-top" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Badkamer-renovatie-index.webp" alt="Badkamer renovatie" class="card-img align-top" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Badkamer renovatie</h3>
                         <p>Complete transformatie van uw badkamer met hoogwaardig tegelwerk en sanitair.</p>
@@ -195,10 +225,10 @@
                 </div>
             </a>
 
-            <!-- 11. Schilder en stuckwerk -->
+            <!-- 10. Schilder en stuckwerk -->
             <a href="schilderwerk-hout.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Schilderwerk-index.jpeg" alt="Schilder en stuckwerk" class="card-img" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Schilderwerk-index.webp" alt="Schilder en stuckwerk" class="card-img" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Schilder en stuckwerk</h3>
                         <p>Professioneel binnen- en buitenschilderwerk en strak stucwerk voor een verzorgd resultaat.</p>
@@ -207,10 +237,22 @@
                 </div>
             </a>
 
+            <!-- 11. Gevel Reiniging/ Hogedruk reinigen -->
+            <a href="gevel-restauratie.html" class="service-card-link animate-up">
+                <div class="service-card">
+                    <div class="img-wrapper"><img fetchpriority="high" src="img/Gevelreinigen-met-hogendrukspuit-index.webp" alt="Gevel Reiniging" class="card-img"></div>
+                    <div class="card-content">
+                        <h3>Gevel Reiniging / Hogedruk reinigen</h3>
+                        <p>Professioneel reinigen, onderhoud en duurzaam herstel voor een onberispelijke uitstraling van uw pand.</p>
+                        <span class="read-more">Ontdek projecten</span>
+                    </div>
+                </div>
+            </a>
+
             <!-- 12. Steigers -->
             <a href="steigers.html" class="service-card-link animate-up">
                 <div class="service-card">
-                    <div class="img-wrapper"><img src="img/Steigers-1.jpeg" alt="Steigers" class="card-img align-top" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="img/Steigers-1.webp" alt="Steigers" class="card-img align-top" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Steigers</h3>
                         <p>Veilige en VCA-gecertificeerde maatwerk steigers voor complexe projecten en werken op hoogte.</p>
@@ -226,6 +268,66 @@
         <cite>— Johan van der Meer | Amsterdam en omstreken</cite>
     </section>
 
+    <section class="reviews-section" style="background: linear-gradient(to bottom, #1c1210 0%, #0d0807 100%); padding: 80px 20px; border-top: 2px solid var(--gold);">
+        <div class="section-title animate-up" style="text-align: center; margin-bottom: 50px;">
+            <h2 class="section-subtitle" style="color: var(--gold);">Klantbeoordelingen</h2>
+            <h3 class="section-title-large" style="color: white; font-size: 2.5rem;">Wat Onze Klanten Zeggen</h3>
+            <div class="divider" style="margin: 20px auto;"></div>
+        </div>
+        <div class="reviews-grid animate-up delay-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto;">
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Wij hebben een uitbouw laten plaatsen en meteen onze gevel laten renoveren aan de Keizersgracht 573 Amsterdam. Alles is perfect uitgevoerd en het huis ziet er weer als nieuw uit. Het team van Van der Meer Dienstengroep werkt netjes en komt afspraken na. Zeker een aanrader!"</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Jan de Vries</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Top aannemersbedrijf! Onze aanbouw en dakwerkzaamheden zijn netjes uitgevoerd. Goede communicatie tijdens het hele project en alles werd netjes opgeleverd. We zijn erg tevreden met het resultaat."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Linda Bakker</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Voor de renovatie van onze woning hebben we dit bedrijf ingeschakeld. Ze hebben het dak vernieuwd ,ook de gevel aangepakt en alle gevelankers hersteld van schade. Vakmensen die weten wat ze doen."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Raymond Vischjager</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Heel blij met onze nieuwe uitbouw aan de zuideinde 277 Oostzaan. Daarnaast hebben ze ook het dak gecontroleerd en kleine reparaties uitgevoerd en een nieuwe afvoergootje geplaatst. Alles werd duidelijk uitgelegd en netjes afgewerkt."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Marieke van Dijk</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Betrouwbaar bedrijf met echte vakmensen. Bij ons hebben ze een aanbouw geplaatst en de gevel opnieuw gevoegd. Het resultaat is prachtig."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Rowena Smith</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Onze dakrenovatie is perfect uitgevoerd. Ze werken snel, netjes en houden zich aan de afspraken. Fijn bedrijf om mee samen te werken."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Anouk Meijer</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Wij hebben onze gevel laten reinigen met de hogedruk en opnieuw laten voegen. Het verschil is enorm. Professioneel, snel team en goede service."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Erik Mulder</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Tijdens de renovatie van ons huis hebben ze zowel de uitbouw als het dakwerk verzorgd. Alles verliep soepel en het eindresultaat is boven verwachting."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Sanne de Boer</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Heel tevreden over de werkzaamheden aan ons dak en de gevel. Goede prijs-kwaliteitverhouding en duidelijke communicatie."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Mark Visser</h4>
+            </div>
+            <div class="review-card" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 8px; border-left: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="color: #FFD700; font-size: 1.2rem; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                <p style="color: #e0e0e0; font-style: italic; line-height: 1.6; margin-bottom: 20px;">"Wij raden Van der Meer Dienstengroep zeker aan. Ze hebben bij ons een aanbouw gemaakt en de gevel gerenoveerd aan de Prinsengracht 1051. Alles werd professioneel uitgevoerd."</p>
+                <h4 style="color: white; font-family: 'Playfair Display', serif; font-size: 1.1rem;">– Karin Bos</h4>
+            </div>
+        </div>
+    </section>
+
     <footer id="contact" class="footer">
         <div class="footer-grid">
             <div class="footer-info">
@@ -236,7 +338,7 @@
                 <h3 style="font-family: 'Playfair Display', serif; color: white;">Contact</h3>
                 <ul>
                     <li>📍 Gerrit Bolkade 64G, Zaandam</li>
-                    <li>📞 06-18015806</li>
+                    <li>📞 06-18015806 / 075-6152909</li>
                     <li>✉️ Info@vandermeerdienstengroep.nl</li>
                 </ul>
             </div>

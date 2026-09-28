@@ -582,3 +582,37 @@ body {
         linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px) !important;
 }
+
+/* --- GALERÍA ARQUITECTÓNICA DE LUJO --- */
+.masonry-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 24px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+.masonry-grid img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease, border-color 0.4s ease !important;
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+    display: block !important;
+}
+.masonry-grid img:hover {
+    transform: translateY(-4px) scale(1.02) !important;
+    filter: brightness(1.08) !important;
+    border-color: var(--gold) !important;
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2) !important;
+}
+
+.navbar .logo-img {
+    height: 60px; /* Ajusta la altura del logo en el menú */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.navbar .logo-img:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definitief Visitekaartje</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --espresso: #1c1210; --mahogany: #0d0807; --gold: #D4AF37; --white: #F8F9FA; }
+        body { background-color: #e0e0e0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; font-family: 'Montserrat', sans-serif; gap: 40px; }
+        .card { width: 535px; height: 346px; background: linear-gradient(to bottom right, var(--espresso) 0%, var(--mahogany) 100%); box-shadow: 0 15px 35px rgba(0,0,0,0.5); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .front-card { text-align: center; }
+        .front-card img.main-logo { width: 220px; height: auto; }
+        
+        .back-card { align-items: flex-start; padding: 40px 50px; justify-content: center; }
+        .back-card .name { font-family: 'Cinzel', serif; color: var(--white); font-size: 22px; margin: 0 0 5px 0; }
+        .back-card .title { color: var(--gold); font-size: 11px; font-weight: 600; margin: 0 0 30px 0; text-transform: uppercase; letter-spacing: 2px; }
+        .contact-info { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; color: rgba(255,255,255,0.85); font-size: 11px; letter-spacing: 0.5px; }
+        .qr-placeholder { position: absolute; right: 40px; bottom: 40px; width: 85px; height: 85px; background-color: var(--white); border: 2px solid var(--gold); display: flex; justify-content: center; align-items: center; padding: 4px; }
+        .qr-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+        .qr-label { position: absolute; right: 40px; bottom: 20px; color: var(--gold); font-size: 8px; text-transform: uppercase; letter-spacing: 1.5px; width: 97px; text-align: center; }
+        .label-text { color: #333; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; margin-bottom: -30px; }
+    </style>
+</head>
+<body>
+    <div class="label-text">Voorkant (Anverso)</div>
+    <div class="card front-card">
+        <img src="img/logo.svg" alt="Logo" class="main-logo">
+    </div>
+
+    <div class="label-text">Achterkant (Reverso)</div>
+    <div class="card back-card">
+        <h2 class="name">Johan van der Meer</h2>
+        <p class="title">Directeur / Aannemer</p>
+        <div class="contact-info">
+            <div class="contact-item">📞 06-18015806 / 075-6152909</div>
+            <div class="contact-item">✉️ info@vandermeerdienstengroep.nl</div>
+            <div class="contact-item">📍 Gerrit Bolkade 64G, Zaandam</div>
+            <div class="contact-item">🌐 www.vandermeerdienstengroep.nl</div>
+        </div>
+        <div class="qr-placeholder">
+            <img src="qr_resenas_vandermeer.png" alt="QR Code">
+        </div>
+        <div class="qr-label">Scan voor 5★ Review</div>
+    </div>
+</body>
+</html>
