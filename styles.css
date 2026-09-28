@@ -616,3 +616,88 @@ body {
 .navbar .logo-img:hover {
     transform: scale(1.05);
 }
+
+/* ==============================================================
+   BOTÓN LLAMADA FLOTANTE
+   ============================================================== */
+.call-float {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    background-color: var(--gold);
+    color: var(--bg-black) !important;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+}
+.call-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+    background-color: #fbf5b7;
+}
+.call-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+/* Ajuste para móviles para que no se pisen */
+@media (max-width: 768px) {
+    .call-float { bottom: 70px; right: 20px; padding: 10px 15px; font-size: 0.9rem; }
+}
+
+/* ==============================================================
+   NUEVA TORRE DE BOTONES FLOTANTES Y OCULTAR NETLIFY
+   ============================================================== */
+/* Subimos el botón de llamada para hacer hueco */
+.call-float { bottom: 150px !important; }
+@media (max-width: 768px) { .call-float { bottom: 120px !important; } }
+
+/* Nuevo botón de Email en el centro */
+.email-float {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    background-color: #f8f9fa;
+    color: #121212 !important;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    border: 1px solid #ddd;
+}
+.email-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+    background-color: #ffffff;
+}
+.email-icon { width: 20px; height: 20px; fill: currentColor; }
+@media (max-width: 768px) {
+    .email-float { bottom: 70px; right: 20px; padding: 10px 15px; font-size: 0.9rem; }
+}
+
+/* FULMINAR LA MARCA DE AGUA DE NETLIFY PARA SIEMPRE */
+a[href*="netlify.com"] img[src*="netlify"],
+#netlify-badge,
+.netlify-badge {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
