@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <link rel="icon" type="image/jpeg" href="img/logovandermeer.jpeg">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Werkwijze | Van der Meer Dienstengroep</title>
     <meta name="description" content="Onze werkwijze: van kennismaking en transparante offerte tot vakkundige uitvoering en sleutelklare oplevering met garantie.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +29,223 @@
       "url": "https://vandermeerdienstengroep.nl"
     }
     </script>
+
+    <!-- ULTRA CREATIVE TIMELINE CSS -->
+    <style>
+        .modern-timeline {
+            position: relative;
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        
+        /* Línea central brillante */
+        .modern-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--gold) 0%, rgba(212, 175, 55, 0.2) 100%);
+            top: 0; 
+            bottom: 0; 
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .timeline-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Alternar lados en escritorio */
+        .timeline-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Contenido de texto Glassmorphism */
+        .step-content {
+            width: 45%;
+            background: rgba(18, 18, 18, 0.7);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .step-content:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 45px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Marca de agua gigante con el número */
+        .step-number {
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(212, 175, 55, 0.05);
+            font-family: 'Playfair Display', serif;
+            z-index: 0;
+            pointer-events: none;
+            transition: color 0.4s ease;
+        }
+        .step-content:hover .step-number {
+            color: rgba(212, 175, 55, 0.12);
+        }
+
+        .step-content h3 {
+            position: relative;
+            z-index: 1;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .step-content p {
+            position: relative;
+            z-index: 1;
+            color: #d1d1d1;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Contenedor de la Imagen */
+        .step-image {
+            width: 45%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .step-image img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .step-image:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Borde animado de la imagen */
+        .step-image::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: border-color 0.4s ease;
+            pointer-events: none;
+        }
+
+        .step-image:hover::after {
+            border-color: rgba(212, 175, 55, 0.8);
+        }
+
+        /* El punto central dorado (Neon effect) */
+        .step-dot {
+            width: 28px;
+            height: 28px;
+            background: var(--bg-black);
+            border: 4px solid var(--gold);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px var(--gold), inset 0 0 5px rgba(212, 175, 55, 0.5);
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-step:hover .step-dot {
+            background: var(--gold);
+            box-shadow: 0 0 25px var(--gold);
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        /* MOBILE RESPONSIVE ADAPTATION */
+        @media (max-width: 768px) {
+            .subpage-hero {
+                background-attachment: scroll !important;
+            }
+            .modern-timeline {
+                padding: 0 15px;
+                margin: 50px auto;
+            }
+            /* Mover la línea a la izquierda */
+            .modern-timeline::before {
+                left: 30px;
+            }
+            .timeline-step, .timeline-step:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 60px;
+            }
+            .step-dot {
+                left: 30px;
+            }
+            .timeline-step:hover .step-dot {
+                transform: translateX(-50%) scale(1.2);
+            }
+            /* Ajustar cajas a la derecha de la línea */
+            .step-content, .step-image {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            .step-image {
+                margin-top: 20px;
+            }
+            .step-image img {
+                height: 220px;
+            }
+            .step-content {
+                padding: 25px;
+            }
+            .step-content h3 {
+                font-size: 1.5rem;
+            }
+            .step-number {
+                font-size: 5rem;
+                top: -10px;
+            }
+            .call-float, .email-float, .whatsapp-float {
+                padding: 8px 12px !important;
+                font-size: 0.8rem !important;
+            }
+            .call-float svg, .email-float svg, .whatsapp-float svg {
+                width: 14px !important;
+                height: 14px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
             <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
         </a>
+                <!-- Botón Menú Móvil -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav class="center-nav">
             <a href="index.html#over-ons">Over Ons</a>
             <a href="index.html#diensten">Specialisaties</a>
@@ -43,44 +255,65 @@
         <div class="header-cta"><a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a></div>
     </header>
 
-    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,1) 100%), url('img/Pand-restauratie-1.webp');">
+    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(5,5,5,0.65) 0%, rgba(5,5,5,0.95) 100%), url('img/Pand-restauratie-1.webp'); background-position: center center; background-size: cover;">
         <div class="hero-content animate-up">
             <h1 class="gold-text">Onze Werkwijze</h1>
             <p>Transparantie, precisie en duidelijke afspraken. Ontdek hoe wij uw project van eerste contact tot sleutelklare oplevering begeleiden.</p>
         </div>
     </section>
 
-    <section class="timeline-container animate-up delay-1">
+    <!-- TIMELINE ULTRA CREATIVA -->
+    <section class="modern-timeline">
         
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <h3 class="gold-text" style="font-size: 1.5rem; margin-bottom: 10px;">1. Kennismaking & Inspectie</h3>
-            <div class="service-text-box" style="padding: 30px;">
-                <p>Elk succesvol project begint met een helder gesprek. Wij komen op locatie voor een grondige inspectie, bespreken uw wensen en beoordelen de technische haalbaarheid.</p>
+        <!-- PASO 1 -->
+        <div class="timeline-step animate-up">
+            <div class="step-dot"></div>
+            <div class="step-content">
+                <span class="step-number">01</span>
+                <h3 class="gold-text">Kennismaking & Inspectie</h3>
+                <p>Elk succesvol project begint met een helder gesprek. Wij komen op locatie voor een grondige inspectie, bespreken uw visie, meten alles nauwkeurig in en beoordelen direct de technische haalbaarheid van uw wensen.</p>
+            </div>
+            <div class="step-image">
+                <img decoding="async" loading="lazy" src="img/uitbouw-form.webp" alt="Bouwkundige inspectie en 3D meting">
             </div>
         </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <h3 class="gold-text" style="font-size: 1.5rem; margin-bottom: 10px;">2. Offerte & Planning</h3>
-            <div class="service-text-box" style="padding: 30px;">
-                <p>U ontvangt een transparante, gespecificeerde offerte zonder verborgen kosten. Na akkoord stellen we een strakke planning op zodat u precies weet waar u aan toe bent.</p>
+        <!-- PASO 2 -->
+        <div class="timeline-step animate-up delay-1">
+            <div class="step-dot"></div>
+            <div class="step-content">
+                <span class="step-number">02</span>
+                <h3 class="gold-text">Offerte & Planning</h3>
+                <p>U ontvangt een transparante, gespecificeerde offerte zonder verborgen kosten, vaak ondersteund door een 3D of bouwkundig ontwerp. Na uw akkoord stellen we een strakke planning op zodat u precies weet wanneer we starten en opleveren.</p>
+            </div>
+            <div class="step-image">
+                <img decoding="async" loading="lazy" src="img/restauratie-3d.webp" alt="Transparante offerte en digitaal ontwerp">
             </div>
         </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <h3 class="gold-text" style="font-size: 1.5rem; margin-bottom: 10px;">3. Uitvoering & Vakmanschap</h3>
-            <div class="service-text-box" style="padding: 30px;">
-                <p>Onze vakmensen gaan aan de slag. Wij garanderen een veilige, schone werkplek en houden u continu op de hoogte van de voortgang tijdens het bouwproces.</p>
+        <!-- PASO 3 -->
+        <div class="timeline-step animate-up">
+            <div class="step-dot"></div>
+            <div class="step-content">
+                <span class="step-number">03</span>
+                <h3 class="gold-text">Uitvoering & Vakmanschap</h3>
+                <p>Onze meestervakmensen gaan aan de slag. Wij werken uitsluitend met premium materialen, garanderen een veilige en schone werkplek, en houden u via korte communicatielijnen continu op de hoogte van de voortgang.</p>
+            </div>
+            <div class="step-image">
+                <img decoding="async" loading="lazy" src="img/foto-final.jpeg" alt="Vakkundige uitvoering door onze specialisten">
             </div>
         </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <h3 class="gold-text" style="font-size: 1.5rem; margin-bottom: 10px;">4. Oplevering & Garantie</h3>
-            <div class="service-text-box" style="padding: 30px;">
-                <p>Pas als u 100% tevreden bent, is het project voor ons afgerond. We lopen alles samen met u na en bieden uitgebreide garantie op het geleverde vakwerk.</p>
+        <!-- PASO 4 -->
+        <div class="timeline-step animate-up delay-1">
+            <div class="step-dot"></div>
+            <div class="step-content">
+                <span class="step-number">04</span>
+                <h3 class="gold-text">Oplevering & Garantie</h3>
+                <p>Pas als u 100% tevreden bent, is het project voor ons afgerond. We lopen het gehele resultaat tot in het kleinste detail samen met u na en bieden uitgebreide garantie op het geleverde high-end vakwerk.</p>
+            </div>
+            <div class="step-image">
+                <img decoding="async" loading="lazy" src="img/badkamer-otro6-eindresultaat.jpeg" alt="Sleutelklare oplevering high-end project">
             </div>
         </div>
 
@@ -110,12 +343,11 @@
         </div>
     </footer>
 
-    
+    <!-- BOTONES COMPACTOS FLOTANTES -->
     <a href="tel:+31618015806" class="call-float">
         <svg class="call-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
         Bellen
     </a>
-    
     <a href="mailto:info@vandermeerdienstengroep.nl" class="email-float">
         <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
         Mailen
@@ -124,5 +356,6 @@
         <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
         WhatsApp
     </a>
+    <script src="main.js"></script>
 </body>
 </html>

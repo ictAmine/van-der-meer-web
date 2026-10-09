@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <link rel="icon" type="image/jpeg" href="img/logovandermeer.jpeg">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Aanbouw & Uitbouw | Van der Meer Dienstengroep</title>
     <meta name="description" content="Luxe uitbouw en aanbouw op maat in Amsterdam. Van 3D ontwerp en houtskeletbouw tot sleutelklare oplevering door Van der Meer Dienstengroep.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +29,98 @@
       "url": "https://vandermeerdienstengroep.nl"
     }
     </script>
+
+    <style>
+        /* BASE DESKTOP */
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+            gap: 20px;
+        }
+        .masonry-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.08);
+            display: block;
+        }
+
+        /* AJUSTES RESPONSIVE MÓVIL (< 768px) */
+        @media (max-width: 768px) {
+            /* Hero nítido sin deformación en Safari ni Android */
+            .subpage-hero {
+                background-attachment: scroll !important;
+                background-position: center center !important;
+                background-size: cover !important;
+                min-height: 280px !important;
+                padding: 60px 15px 40px !important;
+            }
+            .subpage-hero h1 {
+                font-size: 1.85rem !important;
+                line-height: 1.25 !important;
+            }
+            .subpage-hero p {
+                font-size: 0.95rem !important;
+                padding: 0 10px;
+            }
+
+            /* Contenedores con padding ajustado */
+            .service-info-container,
+            .blueprint-section,
+            .gallery-container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .service-text-box {
+                padding: 24px 18px !important;
+                margin-bottom: 25px !important;
+            }
+
+            /* Rejilla de fotos fluida a 1 o 2 columnas según pantalla */
+            .masonry-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+                gap: 12px !important;
+            }
+            .masonry-grid img {
+                height: 170px !important;
+            }
+
+            /* Botones flotantes compactos para no tapar contenido */
+            .call-float, .email-float, .whatsapp-float {
+                padding: 8px 12px !important;
+                font-size: 0.8rem !important;
+            }
+            .call-float svg, .email-float svg, .whatsapp-float svg {
+                width: 14px !important;
+                height: 14px !important;
+            }
+
+            /* Flechas lightbox reducidas y no invasivas */
+            .lightbox-arrow {
+                padding: 8px 12px !important;
+                font-size: 22px !important;
+            }
+            .lightbox-prev { left: 8px !important; }
+            .lightbox-next { right: 8px !important; }
+            .lightbox-close { top: 12px !important; right: 16px !important; font-size: 32px !important; }
+            .lightbox-counter { top: 16px !important; left: 16px !important; font-size: 0.8rem !important; }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; padding: 5px 0;">
             <img src="img/logo.svg" alt="Van der Meer Dienstengroep Logo" style="height: 95px; width: auto; max-width: 100%;">
         </a>
+                <!-- Botón Menú Móvil -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav class="center-nav">
             <a href="index.html#over-ons">Over Ons</a>
             <a href="index.html#diensten">Specialisaties</a>
@@ -43,7 +130,8 @@
         <div class="header-cta"><a href="index.html#contact" class="btn-primary">Offerte Aanvragen</a></div>
     </header>
 
-    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.6) 0%, rgba(7,7,7,1) 100%), url('img/Uitbouw-index.webp');">
+    <!-- HERO SECTION NÍTIDA -->
+    <section class="subpage-hero" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.65) 0%, rgba(7,7,7,0.95) 100%), url('img/Uitbouw-index.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll;">
         <div class="hero-content animate-up">
             <h1 class="gold-text">Aanbouw & Uitbouw</h1>
             <p>Creëer de ruimte waar u altijd van gedroomd heeft. Een naadloze uitbreiding van uw woning, gerealiseerd met de hoogste bouwstandaarden.</p>
@@ -67,16 +155,16 @@
     </section>
 
     <!-- SECCIÓN DE PLANOS Y ESPECIFICACIONES HIGH-END -->
-    <section class="blueprint-section animate-up delay-2" style="max-width: 1300px; margin: 0 auto 80px; padding: 0 20px;">
+    <section class="blueprint-section animate-up delay-2" style="max-width: 1300px; margin: 0 auto 60px; padding: 0 20px;">
         <div class="section-title">
             <h2 class="section-subtitle">Transparantie in Ontwerp</h2>
             <h3 class="section-title-large" style="font-size: 2.5rem;">Technische Precisie & 3D Ontwerp</h3>
             <div class="divider"></div>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; align-items: start;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: start;">
             <!-- Caja de Texto met specificaties -->
-            <div class="service-text-box" style="margin: 0; border-left-color: var(--red-action); padding: 40px;">
+            <div class="service-text-box" style="margin: 0; border-left-color: var(--gold); padding: 35px;">
                 <h3 class="gold-text" style="font-size: 1.5rem; margin-bottom: 20px;">Maatwerk Houtskeletbouw (HSB)</h3>
                 <p>Of het nu gaat om een kantoor aan huis, een luxe berging of een volwaardige uitbouw, een duurzaam resultaat begint bij een feilloos constructief ontwerp. Wij bouwen uitsluitend met premium materialen voor een maximale levensduur en optimale isolatiewaarden.</p>
                 
@@ -88,12 +176,12 @@
                 </ul>
             </div>
             
-            <div style="display: flex; flex-direction: column; gap: 30px;">
-                <div style="position: relative; border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; background: rgba(10,10,10,0.6); backdrop-filter: blur(5px); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img fetchpriority="high" src="img/uitbouw-form.webp" alt="3D Impressie en Plattegrond Buitenmaten" style="width: 100%; height: auto; display: block; border-radius: 2px;" >
+            <div style="display: flex; flex-direction: column; gap: 25px;">
+                <div style="position: relative; border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; background: rgba(10,10,10,0.6); backdrop-filter: blur(5px); border-radius: 4px;">
+                    <img class="zoomable" fetchpriority="high" src="img/uitbouw-form.webp" alt="3D Impressie en Plattegrond Buitenmaten" style="width: 100%; height: auto; display: block; border-radius: 2px;">
                 </div>
-                <div style="position: relative; border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; background: rgba(10,10,10,0.6); backdrop-filter: blur(5px); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <img fetchpriority="high" src="img/uitbouw-form-1.2.webp" alt="Houtskalet Overzicht 3D en Constructiedetails" style="width: 100%; height: auto; display: block; border-radius: 2px;" >
+                <div style="position: relative; border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; background: rgba(10,10,10,0.6); backdrop-filter: blur(5px); border-radius: 4px;">
+                    <img class="zoomable" fetchpriority="high" src="img/uitbouw-form-1.2.webp" alt="Houtskalet Overzicht 3D en Constructiedetails" style="width: 100%; height: auto; display: block; border-radius: 2px;">
                 </div>
             </div>
         </div>
@@ -103,51 +191,57 @@
     <section class="gallery-container animate-up" style="padding-top: 0; margin-bottom: 40px;">
         <div class="section-title">
             <h2 class="section-subtitle">Uitgelicht Project</h2>
-            <h3 class="section-title-large" style="font-size: 2.5rem;">Vrijstaand Bijgebouw & Tuinkantoor</h3>
+            <h3 class="section-title-large" style="font-size: 2.2rem;">Vrijstaand Bijgebouw & Tuinkantoor</h3>
             <div class="divider"></div>
         </div>
         
-        <div class="service-text-box" style="max-width: 900px; margin: 0 auto 50px; text-align: center; border-left: none; border-top: 2px solid var(--gold); padding: 40px;">
+        <div class="service-text-box" style="max-width: 900px; margin: 0 auto 35px; text-align: center; border-left: none; border-top: 2px solid var(--gold); padding: 30px 20px;">
             <p>Van technische tekening tot de uiteindelijke realisatie. Hier ziet u het resultaat van ons vakmanschap in de praktijk: een prachtig afgewerkt bijgebouw dat perfect opgaat in de omgeving. Let op de strakke afwerking van de plint en het hoogwaardige houtwerk waar onze vakmensen met trots aan werken.</p>
         </div>
 
         <div class="masonry-grid">
-            <img fetchpriority="high" src="img/aanbouw-erbij.webp" alt="Gerealiseerd bijgebouw overzicht" >
-            <img fetchpriority="high" src="img/aanbouw-erbij-1.2.webp" alt="Tuinkantoor met terras en strakke afwerking" >
-            <img src="img/aanbouw-erbij-1.3.webp" alt="Vakmanschap en een tevreden realisatie" loading="lazy">
+            <img class="zoomable" fetchpriority="high" src="img/aanbouw-erbij.webp" alt="Gerealiseerd bijgebouw overzicht">
+            <img class="zoomable" fetchpriority="high" src="img/aanbouw-erbij-1.2.webp" alt="Tuinkantoor met terras en strakke afwerking">
+            <img decoding="async" class="zoomable" src="img/aanbouw-erbij-1.3.webp" alt="Vakmanschap en een tevreden realisatie" loading="lazy">
         </div>
     </section>
 
     <!-- PROYECTO DESTACADO 2: EXTENSIÓN DE MADERA -->
-    <section class="gallery-container animate-up" style="padding-top: 0; margin-bottom: 20px;">
+    <section class="gallery-container animate-up" style="padding-top: 0; margin-bottom: 40px;">
         <div class="section-title">
             <h2 class="section-subtitle">Uitgelicht Project</h2>
-            <h3 class="section-title-large" style="font-size: 2.5rem;">Luxe Woninguitbreiding in Hout</h3>
+            <h3 class="section-title-large" style="font-size: 2.2rem;">Luxe Woninguitbreiding in Hout</h3>
             <div class="divider"></div>
         </div>
         
-        <div class="service-text-box" style="max-width: 900px; margin: 0 auto 50px; text-align: center; border-left: none; border-top: 2px solid var(--gold); padding: 40px;">
-            <p>Een perfect voorbeeld van een naadloze aanbouw. Hier hebben we een moderne, lichtovergoten uitbreiding gerealiseerd die prachtig contrasteert met de bestaande klassieke architectuur. De combinatie van het strakke bakstenen fundament, de warme, natuurlijke houten gevelbekleding en de royale glazen schuifpuien zorgt voor een zee aan daglicht en een optimale verbinding met de buitenruimte.</p>
+        <div class="service-text-box" style="max-width: 900px; margin: 0 auto 35px; text-align: center; border-left: none; border-top: 2px solid var(--gold); padding: 30px 20px;">
+            <p>Een perfect voorbeeld van een naadloze aanbouw. Hier hebben we een moderne, lichtovergoten uitbreiding gerealiseerd die prachtig contrasteert met de bestaande klassieke architectuur. De combinatie van het strakke bakstenen fundament, de warme houten gevelbekleding en de royale glazen schuifpuien zorgt voor een zee aan daglicht.</p>
         </div>
 
         <div class="masonry-grid">
-            <img src="img/Uitbouw-index.webp" alt="Luxe woninguitbreiding zijaanzicht" loading="lazy">
-            <img src="img/uitbouw-erbij-1.2.webp" alt="Houten gevelbekleding en strak metselwerk" loading="lazy">
-            <img src="img/uitbouw-erbij-1.3.webp" alt="Grote glazen schuifpuien in nieuwe aanbouw" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Uitbouw-index.webp" alt="Luxe woninguitbreiding zijaanzicht" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/uitbouw-erbij-1.2.webp" alt="Houten gevelbekleding en strak metselwerk" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/uitbouw-erbij-1.3.webp" alt="Grote glazen schuifpuien in nieuwe aanbouw" loading="lazy">
         </div>
     </section>
 
-    <section class="gallery-container" style="padding-top: 20px;">
+    <!-- ACHTER DE SCHERMEN: UITVOERING IN DE PRAKTIJK -->
+    <section class="gallery-container" style="padding-top: 10px; margin-bottom: 80px;">
         <div class="section-title animate-up">
             <h2 class="section-subtitle">Achter de schermen</h2>
-            <h3 class="section-title-large" style="font-size: 2.5rem;">Uitvoering in de Praktijk</h3>
+            <h3 class="section-title-large" style="font-size: 2.2rem;">Uitvoering in de Praktijk</h3>
             <div class="divider"></div>
         </div>
         <div class="masonry-grid animate-up delay-1">
-            <img src="img/Uitbouw-1.2.webp" alt="Uitbouw proces" loading="lazy">
-            <img src="img/Uitbouw-1.3.webp" alt="Uitbouw proces" loading="lazy">
-            <img src="img/Uitbouw-1.5.webp" alt="Uitbouw proces" loading="lazy">
-            <img src="img/Uitbouw-1.6.webp" alt="Uitbouw proces" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Proyect3-before-5.jpeg" alt="Gestorte betonplaat en aanhechting gevel" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Proyect3-before-6.jpeg" alt="Opgaand metselwerk rondom betonplaat" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Proyect3-before-7.jpeg" alt="Houtskeletbouw binnenopbouw" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Proyect3-before-8.jpeg" alt="Constructie houtskelet overzicht" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Proyect3-before-9.jpeg" alt="Realisatie uitbouw gereed voor beglazing" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Uitbouw-1.2.webp" alt="Uitbouw proces 1" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Uitbouw-1.3.webp" alt="Uitbouw proces 2" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Uitbouw-1.5.webp" alt="Uitbouw proces 3" loading="lazy">
+            <img decoding="async" class="zoomable" src="img/Uitbouw-1.6.webp" alt="Uitbouw proces 4" loading="lazy">
         </div>
     </section>
 
@@ -175,12 +269,11 @@
         </div>
     </footer>
 
-    
+    <!-- BOTONES DE CONTACTO DISCRETOS -->
     <a href="tel:+31618015806" class="call-float">
         <svg class="call-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
         Bellen
     </a>
-    
     <a href="mailto:info@vandermeerdienstengroep.nl" class="email-float">
         <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
         Mailen
@@ -189,5 +282,7 @@
         <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
         WhatsApp
     </a>
+
+    <script src="main.js"></script>
 </body>
 </html>
