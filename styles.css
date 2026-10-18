@@ -914,3 +914,33 @@ a[href*="netlify.com"] img[src*="netlify"],
         transform: translateY(-11px) rotate(-45deg);
     }
 }
+
+/* =========================================================
+   MOBILE HEADER: COMPACTO + EFECTO SHRINK AL SCROLL
+   ========================================================= */
+@media (max-width: 768px) {
+    .header {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        grid-template-columns: none !important;
+        padding: 8px 5% !important;
+        transition: padding 0.3s ease, background-color 0.3s ease !important;
+    }
+    .header .logo img {
+        height: 55px !important;
+        transition: height 0.3s ease !important;
+    }
+    .header.scrolled {
+        padding: 4px 5% !important;
+        background-color: rgba(7, 7, 7, 0.97) !important;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    }
+    .header.scrolled .logo img {
+        height: 38px !important;
+    }
+    .menu-toggle {
+        margin-right: 0 !important;
+    }
+}

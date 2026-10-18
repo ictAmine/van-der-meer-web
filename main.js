@@ -116,3 +116,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/* Header compacto al hacer scroll (móvil) */
+(function () {
+    const header = document.querySelector('.header');
+    if (!header) return;
+    let ticking = false;
+    const onScroll = () => {
+        if (window.scrollY > 30) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+    }, { passive: true });
+    onScroll();
+})();
